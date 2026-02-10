@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Wolf! | Bitácora de Fer Mavec</title>
+    <meta name="description" content="Bitácora de pensamiento y cuestionamiento constante. Hello Wolf!">
+    <meta name="author" content="Fernando Mavec">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="main-header">
+        <nav>
+            <div class="logo"><a href="index.html">Fer Mavec.</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Manifiesto</a></li>
+                <li><a href="index.html#about">Bio-Algoritmos</a></li>
+                <li><a href="index.html#pillars">Pilares</a></li>
+                <li><a href="blog.html" class="active">Hello Wolf!</a></li>
+                <li><a href="index.html#contact" class="btn-primary">Conectar</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="page-hero">
+            <div class="container">
+                <span class="subtitle">Bitácora Personal</span>
+                <h1>Hello Wolf!</h1>
+                <p class="hero-text">
+                    Espacio para la curiosidad científica y tecnológica. Aquí cuestionamos lo establecido.
+                </p>
+            </div>
+        </section>
+
+        <section class="blog-filters">
+            <div class="container">
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="date">Por Fecha</button>
+                    <button class="filter-btn" data-filter="topic">Por Tema</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-listing">
+            <div class="container" id="posts-container">
+                <!-- Group: February 2026 -->
+                <div class="posts-group date-group" data-group="Febrero 2026">
+                    <h3 class="group-title">Febrero 2026</h3>
+
+                    <article class="blog-post-card" data-tags="Biohacking Philosophy">
+                        <div class="card-meta">
+                            <span class="post-date">10 de Febrero, 2026</span>
+                            <div class="card-tags">
+                                <span>#Biohacking</span>
+                                <span>#Philosophy</span>
+                            </div>
+                        </div>
+                        <h3><a href="blog-posts/deuda-tecnica-vs-biologica.html">Deuda Técnica vs. Deuda Biológica: Tu
+                                Cuerpo no es un iPhone</a></h3>
+                        <p>Cómo aplicar principios de refactorización de software a la optimización metabólica diaria.
+                        </p>
+                        <a href="blog-posts/deuda-tecnica-vs-biologica.html" class="read-more">Leer Más <i
+                                class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="blog-post-card" data-tags="AI HealthTech">
+                        <div class="card-meta">
+                            <span class="post-date">Destacado</span>
+                            <div class="card-tags">
+                                <span>#AI</span>
+                                <span>#HealthTech</span>
+                            </div>
+                        </div>
+                        <h3><a href="#">RAG para tu Salud: Tu cuerpo como base de conocimiento</a></h3>
+                        <p>Implementando sistemas de recuperación aumentada para la toma de decisiones clínicas
+                            personales.</p>
+                        <a href="#" class="read-more">Leer Más <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+
+                <!-- Topic Groups (Hidden by default, toggled via JS visually) -->
+                <!-- We will use JS to restructure/show/hide or just CSS classes -->
+                <!-- Ideally, JS parses the posts and re-renders them. But for simplicity and static nature, let's keep it simple. -->
+                <!-- Let's implement robust JS in main.js to handle the sorting display effectively. -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Fer Mavec.</div>
+                <p>&copy; 2026 Fer Mavec. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Inline script for specific blog filtering logic or move to main.js if preferred.
+        // Moving to main.js is cleaner.
+    </script>
+</body>
+
+</html>
