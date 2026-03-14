@@ -184,7 +184,7 @@ nav {
 }
 
 .hero-content {
-    flex: 1;
+    flex: 1.5;
     z-index: 2;
 }
 
@@ -192,7 +192,8 @@ nav {
     display: block;
     color: var(--accent-color);
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-top: 0;
+    /* ~12px instead of 16px */
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-size: 0.9rem;
@@ -202,7 +203,8 @@ h1 {
     font-size: 3.8rem;
     line-height: 1.1;
     font-weight: 800;
-    margin-bottom: 2rem;
+    margin-bottom: 1.7rem;
+    /* ~27px instead of 32px */
     letter-spacing: -0.03em;
 }
 
@@ -216,8 +218,9 @@ h1 {
 .hero-content p {
     font-size: 1.2rem;
     color: var(--text-secondary);
-    max-width: 600px;
-    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-bottom: 2.25rem;
+    /* ~36px instead of 40px */
 }
 
 .cta-group {
@@ -226,7 +229,7 @@ h1 {
 }
 
 .hero-visual {
-    flex: 1;
+    flex: 0.5;
     height: 500px;
     display: flex;
     justify-content: center;
@@ -734,6 +737,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .cta-group {
