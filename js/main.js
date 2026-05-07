@@ -141,4 +141,59 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Accessibility Features
+    const fontSizeIncBtn = document.getElementById('fontSizeIncBtn');
+    const fontSizeDecBtn = document.getElementById('fontSizeDecBtn');
+    const ttsBtn = document.getElementById('ttsBtn');
+
+    if (fontSizeIncBtn && fontSizeDecBtn) {
+        let currentScale = 100;
+        
+        fontSizeIncBtn.addEventListener('click', () => {
+            if (currentScale < 140) {
+                currentScale += 10;
+                document.documentElement.style.fontSize = currentScale + '%';
+            }
+        });
+        
+        fontSizeDecBtn.addEventListener('click', () => {
+            if (currentScale > 80) {
+                currentScale -= 10;
+                document.documentElement.style.fontSize = currentScale + '%';
+            }
+        });
+    }
+
+    if (ttsBtn) {
+        let isSpeaking = false;
+        
+        ttsBtn.addEventListener('click', () => {
+            if (isSpeaking || window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+                isSpeaking = false;
+                ttsBtn.style.color = '';
+            } else {
+                const mainContent = document.querySelector('main');
+                if (mainContent) {
+                    const text = mainContent.innerText;
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    utterance.lang = document.documentElement.lang === 'es' ? 'es-ES' : 'en-US';
+                    
+                    utterance.onend = () => {
+                        isSpeaking = false;
+                        ttsBtn.style.color = '';
+                    };
+                    
+                    window.speechSynthesis.speak(utterance);
+                    isSpeaking = true;
+                    ttsBtn.style.color = 'var(--text-primary)';
+                }
+            }
+        });
+        
+        window.addEventListener('beforeunload', () => {
+            window.speechSynthesis.cancel();
+        });
+    }
 });

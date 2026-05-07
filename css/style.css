@@ -106,12 +106,17 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+}
+
+.nav-links a {
+    white-space: nowrap;
 }
 
 .nav-links a:not(.btn-primary) {
@@ -196,8 +201,8 @@ nav {
 }
 
 h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
+    font-size: 3.2rem;
+    line-height: 1.15;
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: -0.04em;
@@ -797,4 +802,65 @@ footer {
     .section-title {
         font-size: 1.5rem;
     }
+}
+
+/* Added for Research Interests & Hero Update */
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.research-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: var(--transition-fast);
+}
+
+.research-item:hover {
+    border-color: var(--text-primary);
+}
+
+.research-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.research-item p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Accessibility Buttons */
+.accessibility-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+    padding: 0.2rem;
+}
+
+.accessibility-btn:hover {
+    color: var(--text-primary);
+    transform: scale(1.1);
 }
