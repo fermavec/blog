@@ -53,10 +53,7 @@
                 <li><a href="#about">Profile</a></li>
                 <li><a href="#expertise">Expertise</a></li>
                 <li><a href="#services">Collaboration</a></li>
-                <li><a href="blog.html">Hello Wolf!</a></li>
-                <li><button id="ttsBtn" class="accessibility-btn" aria-label="Read content" title="Read content"><i class="fas fa-volume-up"></i></button></li>
-                <li><button id="fontSizeDecBtn" class="accessibility-btn" aria-label="Decrease font size" title="Decrease font size" style="font-weight: 700; font-family: var(--font-main);">A-</button></li>
-                <li><button id="fontSizeIncBtn" class="accessibility-btn" aria-label="Increase font size" title="Increase font size" style="font-weight: 700; font-family: var(--font-main);">A+</button></li>
+                <li><a href="blog-en.html">Hello Wolf!</a></li>
                 <li><a href="es.html" class="lang-toggle">ES</a></li>
                 <li><a href="#contact" class="btn-primary">Contact</a></li>
             </ul>
@@ -72,13 +69,12 @@
             <div class="hero-content">
                 <span class="subtitle">MSc Data Science & AI</span>
                 <h1>Human-Centered AI Analyst <span class="highlight">& Technology Researcher</span></h1>
-                <p class="hero-subtitle">Research, analysis and development focused on cognition, accessibility and human-centered intelligent systems.</p>
                 <p class="hero-text">
-                    Rigorous analysis and technical development in Artificial Intelligence. I specialize in the intersection of complex systems, cognition, and human-AI interaction.
+                    Research and technical development focusing on complex systems and human cognition.
                 </p>
                 <div class="cta-group">
                     <a href="#about" class="btn-primary">View Profile</a>
-                    <a href="blog.html" class="btn-secondary">Read Analysis</a>
+                    <a href="blog-en.html" class="btn-secondary">Read Blog</a>
                 </div>
             </div>
         </section>
@@ -225,10 +221,21 @@
                     <p>In this space, I publish technical essays, research notes, and strategic analysis on the development of artificial intelligence. My goal is to bring clarity and rigor to complex discussions about the impact of technology on behavior and society. (Note: Articles are currently available in Spanish).</p>
                 </div>
 
+                <div class="newsletter-cta" style="background: transparent; border: 1px solid var(--border-color, #333); border-radius: 6px; padding: 1.2rem 1.5rem; margin: 2rem 0; display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
+                    <div style="font-size: 0.7rem; font-weight: 600; color: var(--accent-color, #00f0ff); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;"><i class="fas fa-lock" style="margin-right: 4px;"></i> Exclusive Content</div>
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; gap: 1rem;">
+                        <div style="flex: 1 1 300px;">
+                            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Human-Centered AI Strategy</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Join my Substack for deep-dive business analysis and strategic frameworks.</p>
+                        </div>
+                        <a href="https://fermavec.substack.com/subscribe" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--text-main, #fff); color: #000; font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1.2rem; border-radius: 4px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: opacity 0.2s;">Subscribe to Substack</a>
+                    </div>
+                </div>
+
                 <div class="blog-list">
                     <article class="blog-post">
                         <span class="post-date">March 19, 2026</span>
-                        <h3><a href="blog-posts/inteligente-pero-huerfana.html">Inteligente Pero Huérfana: Por Qué la Máquina Más Lista del Mundo No Tiene Ni Idea de Quién Eres</a></h3>
+                        <h3><a href="blog-posts/inteligente-pero-huerfana-en.html">Intelligent But Orphaned: Why the World's Smartest Machine Has No Idea Who You Are</a></h3>
                         <p>Analysis of context retention mechanisms in AI and the fundamental limitations of current models in establishing continuous memory.</p>
                         <div class="tags">
                             <span>#ArtificialIntelligence</span>
@@ -238,8 +245,7 @@
                     </article>
                     <article class="blog-post">
                         <span class="post-date">March 14, 2026</span>
-                        <h3><a href="blog-posts/replicants-intelligence.html">Replicants Intelligence: Por qué le
-                                pedimos perdón a una calculadora con buena dicción</a></h3>
+                        <h3><a href="blog-posts/replicants-intelligence-en.html">Replicants Intelligence: Why we apologize to a calculator with good diction</a></h3>
                         <p>A case study on algorithmic anthropomorphization and how the design of conversational interfaces influences user perception.</p>
                         <div class="tags">
                             <span>#HumanComputerInteraction</span>
@@ -294,6 +300,11 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <div class="accessibility-widget">
+        <button id="ttsBtn" class="accessibility-btn" aria-label="Read content" title="Read content"><i class="fas fa-volume-up"></i></button>
+        <button id="fontSizeDecBtn" class="accessibility-btn" aria-label="Decrease font size" title="Decrease font size" style="font-weight: 700; font-family: var(--font-main);">A-</button>
+        <button id="fontSizeIncBtn" class="accessibility-btn" aria-label="Increase font size" title="Increase font size" style="font-weight: 700; font-family: var(--font-main);">A+</button>
+    </div>
 </body>
 
 </html>
