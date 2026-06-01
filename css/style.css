@@ -836,7 +836,7 @@ footer {
 .research-item h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
@@ -881,4 +881,20 @@ footer {
     background: var(--hover-bg);
     color: var(--text-primary);
     transform: scale(1.1);
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1.05rem;
+    background-color: var(--accent-color);
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }

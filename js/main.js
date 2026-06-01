@@ -196,4 +196,25 @@ document.addEventListener('DOMContentLoaded', () => {
             window.speechSynthesis.cancel();
         });
     }
+
+    // Typewriter effect
+    const typewriterEs = document.getElementById('typewriter-text-es');
+    const typewriterEn = document.getElementById('typewriter-text-en');
+    
+    function typeWriter(element, text, i) {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            setTimeout(() => typeWriter(element, text, i + 1), 35);
+        }
+    }
+    
+    if (typewriterEs) {
+        const textEs = "Análisis independiente, ensayos técnicos y folclore digital en la intersección de la inteligencia artificial, la cognición y la sociedad.";
+        setTimeout(() => typeWriter(typewriterEs, textEs, 0), 500);
+    }
+    
+    if (typewriterEn) {
+        const textEn = "Independent analysis, technical essays and digital folklore at the intersection of artificial intelligence, cognition and society.";
+        setTimeout(() => typeWriter(typewriterEn, textEn, 0), 500);
+    }
 });

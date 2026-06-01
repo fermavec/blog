@@ -22,3 +22,8 @@ build/
 # Local env
 .env
 .env.local
+
+# Blog Content Preservation
+blog.html
+blog-en.html
+blog-posts/
