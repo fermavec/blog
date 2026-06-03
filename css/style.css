@@ -110,9 +110,21 @@ nav {
 }
 
 .nav-links {
-    display: flex;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg);
+    flex-direction: column;
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-color);
     gap: 1.5rem;
-    align-items: center;
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: flex;
 }
 
 .nav-links a {
@@ -136,9 +148,10 @@ nav {
 }
 
 .hamburger {
-    display: none;
+    display: block;
     font-size: 1.25rem;
     cursor: pointer;
+    color: var(--text-primary);
 }
 
 /* Buttons */
@@ -760,25 +773,7 @@ footer {
     .hero-content {
         padding: 2rem 0;
     }
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--card-bg);
-        flex-direction: column;
-        padding: 2rem;
-        border-bottom: 1px solid var(--border-color);
-        gap: 1.5rem;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .hamburger {
-        display: block;
-        color: var(--text-primary);
-    }
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
