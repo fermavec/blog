@@ -16,6 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        #perspective .research-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        #perspective .research-item {
+            flex: 0 0 calc(33.333% - 1rem);
+            min-width: 240px;
+        }
+    </style>
+
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
@@ -24,10 +37,10 @@
       "name": "Fer Mavec",
       "jobTitle": "AI Researcher, Analyst & Technical Writer",
       "knowsAbout": [
-        "Artificial Intelligence", 
-        "Human-Centered Systems", 
-        "Accessibility", 
-        "Technology Analysis", 
+        "Artificial Intelligence",
+        "Human-Centered Systems",
+        "Accessibility",
+        "Technology Analysis",
         "Socio-Technical Studies",
         "Responsible AI"
       ],
@@ -42,6 +55,7 @@
       ]
     }
     </script>
+
 </head>
 
 <body>
@@ -50,14 +64,12 @@
         <nav>
             <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div>
             <ul class="nav-links">
-                <li><a href="#about">Profile</a></li>
-                <li><a href="#research">Research Themes</a></li>
-                <li><a href="#essays">Essays & Research</a></li>
-                <li><a href="#collaboration">Collaboration</a></li>
+                <li><a href="#services">What I can do for you</a></li>
+                <li><a href="#perspective">Perspective & Research</a></li>
+                <li><a href="#contact">Let's talk</a></li>
             </ul>
             <div style="display: flex; align-items: center; gap: 1.2rem;">
                 <a href="es.html" class="lang-toggle" style="font-size: 0.95rem;">ES</a>
-                <a href="portfolio.html" style="font-weight: 600; font-size: 0.95rem;">Portfolio</a>
                 <div class="hamburger" style="margin-left: 1rem;">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -67,19 +79,28 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero">
+        <section id="hero" style="min-height: 0;">
             <div class="hero-content">
-                <h1 style="margin-bottom: 1.5rem;">AI Researcher, Analyst <span class="highlight">& Technical Writer</span></h1>
-                <p class="hero-text" style="margin-bottom: 2.5rem;">
-                    Exploring how artificial intelligence reshapes cognition, behavior and society.
-                </p>
-                <p class="typewriter-container" style="font-size: 1.05rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 2.5rem; opacity: 0.9; min-height: 3rem;" aria-label="Independent analysis, technical essays and digital folklore at the intersection of artificial intelligence, cognition and society.">
-                    <span id="typewriter-text-en" aria-hidden="true"></span><span class="typewriter-cursor" aria-hidden="true"></span>
-                </p>
+                <h1 style="margin-bottom: 1.2rem;">AI Researcher, Analyst <span class="highlight">& Technical Writer</span></h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; font-weight: 400; margin: 0 0 2.5rem;">I work at the frontier between artificial intelligence and the people who live it.</p>
+                <div class="social-links-large">
+                    <a href="https://www.linkedin.com/in/fermavec/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/fermavec" target="_blank" aria-label="Github" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; font-weight: 500;"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:fermavec@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </section>
 
-        <!-- About / Profile Section -->
+        <!-- PRESERVED: original hero secondary text and typewriter (not included in new design)
+        <p class="hero-text" style="margin-bottom: 2.5rem;">
+            Exploring how artificial intelligence reshapes cognition, behavior and society.
+        </p>
+        <p class="typewriter-container" ... >
+            <span id="typewriter-text-en" aria-hidden="true"></span><span class="typewriter-cursor" aria-hidden="true"></span>
+        </p>
+        -->
+
+        <!-- PRESERVED: About / Profile Section (bio content not included in new design)
         <section id="about" style="padding-bottom: 2rem;">
             <div class="container">
                 <h2 class="section-title">Research & Analysis</h2>
@@ -95,12 +116,63 @@
                 </div>
             </div>
         </section>
+        -->
 
-        <!-- Research Themes Section -->
-        <section id="research" style="padding: 3rem 0;">
+        <!-- Services Section -->
+        <section id="services" style="padding: 4rem 0;">
             <div class="container">
-                <h2 class="section-title">Research Themes</h2>
-                <div class="research-grid">
+                <h2 class="section-title">What I can do for you</h2>
+                <div class="projects-grid" style="margin-top: 2rem;">
+
+                    <div class="project-card" style="display: flex; flex-direction: column;">
+                        <h3>Technical & Executive Writing</h3>
+                        <p>Technical documents, whitepapers, executive ghostwriting and B2B content that translates complex AI and technology topics into clear, high-impact communication for decision-makers.</p>
+                        <div style="margin-top: auto; padding-top: 1.5rem;">
+                            <a href="https://drive.google.com/file/d/1XW4Af4xb0h9jg5Q_dGcjy36ZbeaQCKG8/view" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+                                <i class="fas fa-download"></i> Download Portfolio (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" style="display: flex; flex-direction: column;">
+                        <h3>Accessibility Auditing <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-secondary);">(Vision-centered)</span></h3>
+                        <p>End-to-end accessibility audits for digital products, focused on low vision and visual impairment. Combines automated detection with real-user experience and references WCAG 2.2 and international accessibility standards.</p>
+                        <div style="margin-top: auto; padding-top: 1.5rem;">
+                            <a href="https://drive.google.com/file/d/1ZU5Cx8Axi7qR3yFEDgPRVImDA7pfHcTJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                                See demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" style="display: flex; flex-direction: column;">
+                        <h3>Responsible AI Consulting & Governance</h3>
+                        <p>Advisory and implementation for organizations adopting AI responsibly — ethics frameworks, ISO standards, risk assessment and human-centered governance. Includes an AI Readiness diagnostic with senior leadership.</p>
+                        <div style="margin-top: auto; padding-top: 1.5rem;">
+                            <a href="mailto:fermavec@gmail.com?subject=Responsible%20AI%20Consulting" class="btn-secondary">
+                                Send me an email
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- PRESERVED: AI Readiness Assessment as standalone service (merged into Responsible AI Consulting above)
+                <div class="project-card">
+                    <h3>AI Readiness Assessment</h3>
+                    <p>Structured evaluation of an organization's technical, operational and cultural readiness to adopt AI systems, with actionable recommendations aligned to human-centered principles.</p>
+                    <a href="mailto:fermavec@gmail.com?subject=Presentation%20request%20%E2%80%94%20AI%20Readiness%20Assessment" class="btn-secondary">Request presentation</a>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- Perspective & Research Section -->
+        <section id="perspective" style="padding: 4rem 0;">
+            <div class="container">
+                <h2 class="section-title">Perspective & Research</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin-bottom: 3rem; line-height: 1.6;">My applied work is informed by an active research perspective on the human and social impact of AI — across accessibility, governance, cognition and the sociotechnical dimensions of intelligent systems.</p>
+
+                <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 2rem; letter-spacing: -0.02em;">Research Themes</h3>
+                <div class="research-grid" style="margin-bottom: 4rem;">
                     <div class="research-item">
                         <h4>Human-Centered Systems</h4>
                         <p>Systems designed to align with and amplify human cognition and functional utility.</p>
@@ -118,38 +190,13 @@
                         <p>Study of behavioral dynamics, trust, and communication in synthetic-human partnerships.</p>
                     </div>
                     <div class="research-item">
-                        <h4>Cognitive Systems</h4>
-                        <p>Architectures that emulate or interface with human cognitive processing mechanisms.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>Synthetic Behavior</h4>
-                        <p>Analysis of emergent algorithmic behavior and anthropomorphic user perception.</p>
-                    </div>
-                    <div class="research-item">
                         <h4>AI & Society</h4>
                         <p>Broader impacts of intelligent automation on culture, labor, and social structures.</p>
                     </div>
-                    <div class="research-item">
-                        <h4>Socio-Technical Systems</h4>
-                        <p>Evaluating AI as embedded social systems, beyond pure mathematical abstraction.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>Strategic Technology Analysis</h4>
-                        <p>Evidence-based synthesis of technological trajectories and structural industry shifts.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>Digital Folklore</h4>
-                        <p>The cultural narratives, myths, and human adaptations surrounding emerging digital phenomena.</p>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Essays & Research Section -->
-        <section id="essays">
-            <div class="container">
                 <div class="blog-header">
-                    <h2 class="section-title">Essays & Research</h2>
+                    <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Essays & Research</h3>
                     <p class="section-subtitle">Curated archive of independent research, technical essays and socio-technical analysis.</p>
                 </div>
 
@@ -190,6 +237,12 @@
                         </div>
                     </article>
                 </div>
+
+                <div style="margin-top: 2.5rem;">
+                    <a href="https://github.com/fermavec" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text-secondary); font-size: 1rem; transition: color 0.2s;">
+                        <i class="fab fa-github" style="font-size: 1.2rem;"></i> github.com/fermavec
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -202,9 +255,17 @@
                 Profile: fermavec.com</p>
         </section>
 
-        <section id="collaboration" style="padding: 3rem 0; margin-bottom: 3rem;">
-            <div class="container">
-                <h2 class="section-title">Research & Collaboration</h2>
+        <!-- Contact Section -->
+        <section id="contact" style="padding: 4rem 0; margin-bottom: 3rem;">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title" style="display: block;">Let's talk</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.6;">If you have a project, idea or challenge that could use a sharp perspective — let's talk.</p>
+                <a href="mailto:fermavec@gmail.com" class="btn-primary" style="display: inline-block; margin-bottom: 2rem; font-size: 1rem; padding: 0.8rem 1.5rem;">fermavec@gmail.com</a>
+                <div style="display: flex; gap: 1.5rem; font-size: 1.3rem; justify-content: center; align-items: center;">
+                    <a href="https://www.linkedin.com/in/fermavec/" target="_blank" aria-label="LinkedIn" style="color: var(--text-secondary); transition: color 0.2s;"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/fermavec" target="_blank" aria-label="Github" style="color: var(--text-secondary); transition: color 0.2s; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 1rem;"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+                <!-- PRESERVED: original collaboration section content (replaced by new contact section)
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 3rem; margin-top: 1rem; align-items: start;">
                     <div>
                         <p style="font-weight: 600; margin-bottom: 1rem; color: var(--text-primary);">Available for:</p>
@@ -230,6 +291,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </section>
     </main>
@@ -249,6 +311,8 @@
         <button id="fontSizeDecBtn" class="accessibility-btn" aria-label="Decrease font size" title="Decrease font size" style="font-weight: 700; font-family: var(--font-main);">A-</button>
         <button id="fontSizeIncBtn" class="accessibility-btn" aria-label="Increase font size" title="Increase font size" style="font-weight: 700; font-family: var(--font-main);">A+</button>
     </div>
+
+
 </body>
 
 </html>

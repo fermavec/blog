@@ -16,6 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <style>
+        #perspective .research-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        #perspective .research-item {
+            flex: 0 0 calc(33.333% - 1rem);
+            min-width: 240px;
+        }
+    </style>
+
     <!-- Schema.org -->
     <script type="application/ld+json">
     {
@@ -24,10 +37,10 @@
       "name": "Fer Mavec",
       "jobTitle": "Investigador en IA, Analista y Escritor Técnico",
       "knowsAbout": [
-        "Artificial Intelligence", 
-        "Human-Centered Systems", 
-        "Accessibility", 
-        "Technology Analysis", 
+        "Artificial Intelligence",
+        "Human-Centered Systems",
+        "Accessibility",
+        "Technology Analysis",
         "Socio-Technical Studies",
         "Responsible AI"
       ],
@@ -42,6 +55,7 @@
       ]
     }
     </script>
+
 </head>
 
 <body>
@@ -50,14 +64,12 @@
         <nav>
             <div class="logo"><a href="es.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div>
             <ul class="nav-links">
-                <li><a href="#about">Perfil</a></li>
-                <li><a href="#research">Investigación</a></li>
-                <li><a href="#essays">Ensayos & Investigación</a></li>
-                <li><a href="#collaboration">Colaboración</a></li>
+                <li><a href="#services">Qué puedo hacer por ti</a></li>
+                <li><a href="#perspective">Perspectiva e Investigación</a></li>
+                <li><a href="#contact">Hablemos</a></li>
             </ul>
             <div style="display: flex; align-items: center; gap: 1.2rem;">
                 <a href="index.html" class="lang-toggle" style="font-size: 0.95rem;">EN</a>
-                <a href="portafolio.html" style="font-weight: 600; font-size: 0.95rem;">Portafolio</a>
                 <div class="hamburger" style="margin-left: 1rem;">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -67,19 +79,28 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero">
+        <section id="hero" style="min-height: 0;">
             <div class="hero-content">
-                <h1 style="margin-bottom: 1.5rem;">Investigador en IA, Analista <span class="highlight">& Escritor Técnico</span></h1>
-                <p class="hero-text" style="margin-bottom: 2.5rem;">
-                    Explorando cómo la inteligencia artificial transforma la cognición, el comportamiento y la sociedad.
-                </p>
-                <p class="typewriter-container" style="font-size: 1.05rem; color: var(--text-secondary); max-width: 700px; margin-bottom: 2.5rem; opacity: 0.9; min-height: 3rem;" aria-label="Análisis independiente, ensayos técnicos y folclore digital en la intersección de la inteligencia artificial, la cognición y la sociedad.">
-                    <span id="typewriter-text-es" aria-hidden="true"></span><span class="typewriter-cursor" aria-hidden="true"></span>
-                </p>
+                <h1 style="margin-bottom: 1.2rem;">Investigador en IA, Analista <span class="highlight">& Escritor Técnico</span></h1>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.6; font-weight: 400; margin: 0 0 2.5rem;">Trabajo en la frontera entre la inteligencia artificial y las personas que la viven.</p>
+                <div class="social-links-large">
+                    <a href="https://www.linkedin.com/in/fermavec/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/fermavec" target="_blank" aria-label="Github" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; font-weight: 500;"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:fermavec@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </section>
 
-        <!-- About / Profile Section -->
+        <!-- PRESERVED: texto secundario hero y typewriter originales (no incluidos en el nuevo diseño)
+        <p class="hero-text" style="margin-bottom: 2.5rem;">
+            Explorando cómo la inteligencia artificial transforma la cognición, el comportamiento y la sociedad.
+        </p>
+        <p class="typewriter-container" ... >
+            <span id="typewriter-text-es" aria-hidden="true"></span><span class="typewriter-cursor" aria-hidden="true"></span>
+        </p>
+        -->
+
+        <!-- PRESERVED: Sección About / Perfil (contenido del bio no incluido en el nuevo diseño)
         <section id="about" style="padding-bottom: 2rem;">
             <div class="container">
                 <h2 class="section-title">Investigación & Análisis</h2>
@@ -95,12 +116,63 @@
                 </div>
             </div>
         </section>
+        -->
 
-        <!-- Research Themes Section -->
-        <section id="research" style="padding: 3rem 0;">
+        <!-- Sección de Servicios -->
+        <section id="services" style="padding: 4rem 0;">
             <div class="container">
-                <h2 class="section-title">Temas de Investigación</h2>
-                <div class="research-grid">
+                <h2 class="section-title">Qué puedo hacer por ti</h2>
+                <div class="projects-grid" style="margin-top: 2rem;">
+
+                    <div class="project-card" style="display: flex; flex-direction: column;">
+                        <h3>Technical & Executive Writing</h3>
+                        <p>Documentos técnicos, whitepapers, ghostwriting ejecutivo y contenido B2B que traduce temas complejos de IA y tecnología en comunicación clara y de alto impacto para tomadores de decisión.</p>
+                        <div style="margin-top: auto; padding-top: 1.5rem;">
+                            <a href="https://drive.google.com/file/d/1XW4Af4xb0h9jg5Q_dGcjy36ZbeaQCKG8/view" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.4rem;">
+                                <i class="fas fa-download"></i> Descargar Portafolio (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" style="display: flex; flex-direction: column;">
+                        <h3>Accessibility Auditing <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-secondary);">(Vision-centered)</span></h3>
+                        <p>Auditorías de accesibilidad integral para productos digitales, con enfoque en baja visión y discapacidad visual. Combina detección automatizada con experiencia de usuario real y referencia a WCAG 2.2 y normativas internacionales de accesibilidad.</p>
+                        <div style="margin-top: auto; padding-top: 1.5rem;">
+                            <a href="https://drive.google.com/file/d/1ZU5Cx8Axi7qR3yFEDgPRVImDA7pfHcTJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                                Ver demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card" style="display: flex; flex-direction: column;">
+                        <h3>Responsible AI Consulting & Governance</h3>
+                        <p>Asesoría e implementación para organizaciones que adoptan IA de forma responsable — marcos éticos, normas ISO, evaluación de riesgos y gobernanza centrada en el humano. Incluye un diagnóstico de madurez en IA con la alta gerencia.</p>
+                        <div style="margin-top: auto; padding-top: 1.5rem;">
+                            <a href="mailto:fermavec@gmail.com?subject=Responsible%20AI%20Consulting" class="btn-secondary">
+                                Escríbeme
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- PRESERVED: AI Readiness Assessment como servicio independiente (integrado en Responsible AI Consulting)
+                <div class="project-card">
+                    <h3>AI Readiness Assessment</h3>
+                    <p>Evaluación estructurada de la madurez técnica, operativa y cultural de una organización para adoptar sistemas de IA, con recomendaciones accionables alineadas a principios centrados en el humano.</p>
+                    <a href="mailto:fermavec@gmail.com?subject=Solicitud%20de%20presentaci%C3%B3n%20%E2%80%94%20AI%20Readiness%20Assessment" class="btn-secondary">Solicitar presentación</a>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- Sección Perspectiva e Investigación -->
+        <section id="perspective" style="padding: 4rem 0;">
+            <div class="container">
+                <h2 class="section-title">Perspectiva e Investigación</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin-bottom: 3rem; line-height: 1.6;">Mi trabajo aplicado está informado por una perspectiva de investigación activa sobre el impacto humano y social de la IA — en accesibilidad, gobernanza, cognición y las dimensiones sociotécnicas de los sistemas inteligentes.</p>
+
+                <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 2rem; letter-spacing: -0.02em;">Temas de Investigación</h3>
+                <div class="research-grid" style="margin-bottom: 4rem;">
                     <div class="research-item">
                         <h4>Sistemas Centrados en el Humano</h4>
                         <p>Sistemas diseñados para alinearse y amplificar la cognición humana y la utilidad funcional.</p>
@@ -118,38 +190,13 @@
                         <p>Estudio de dinámicas de comportamiento, confianza y comunicación en asociaciones sintético-humanas.</p>
                     </div>
                     <div class="research-item">
-                        <h4>Sistemas Cognitivos</h4>
-                        <p>Arquitecturas que emulan o se interconectan con los mecanismos humanos de procesamiento cognitivo.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>Comportamiento Sintético</h4>
-                        <p>Análisis del comportamiento algorítmico emergente y la percepción antropomórfica del usuario.</p>
-                    </div>
-                    <div class="research-item">
                         <h4>IA y Sociedad</h4>
                         <p>Impactos más amplios de la automatización inteligente en la cultura, el trabajo y las estructuras sociales.</p>
                     </div>
-                    <div class="research-item">
-                        <h4>Sistemas Socio-Técnicos</h4>
-                        <p>Evaluación de la IA como sistemas sociales integrados, más allá de la pura abstracción matemática.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>Análisis Tecnológico Estratégico</h4>
-                        <p>Síntesis basada en evidencia de trayectorias tecnológicas y cambios estructurales en la industria.</p>
-                    </div>
-                    <div class="research-item">
-                        <h4>Folclore Digital</h4>
-                        <p>Las narrativas culturales, mitos y adaptaciones humanas que rodean los fenómenos digitales emergentes.</p>
-                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Essays & Research Section -->
-        <section id="essays">
-            <div class="container">
                 <div class="blog-header">
-                    <h2 class="section-title">Ensayos & Investigación</h2>
+                    <h3 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: -0.02em;">Ensayos & Investigación</h3>
                     <p class="section-subtitle">Archivo de investigación independiente, ensayos técnicos y análisis socio-técnico.</p>
                 </div>
 
@@ -190,6 +237,12 @@
                         </div>
                     </article>
                 </div>
+
+                <div style="margin-top: 2.5rem;">
+                    <a href="https://github.com/fermavec" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text-secondary); font-size: 1rem; transition: color 0.2s;">
+                        <i class="fab fa-github" style="font-size: 1.2rem;"></i> github.com/fermavec
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -202,9 +255,17 @@
                 Perfil: fermavec.com</p>
         </section>
 
-        <section id="collaboration" style="padding: 3rem 0; margin-bottom: 3rem;">
-            <div class="container">
-                <h2 class="section-title">Investigación & Colaboración</h2>
+        <!-- Sección de Contacto -->
+        <section id="contact" style="padding: 4rem 0; margin-bottom: 3rem;">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title" style="display: block;">Hablemos</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.6;">Si tienes un proyecto, una idea o un reto que necesita una perspectiva sólida — hablemos.</p>
+                <a href="mailto:fermavec@gmail.com" class="btn-primary" style="display: inline-block; margin-bottom: 2rem; font-size: 1rem; padding: 0.8rem 1.5rem;">fermavec@gmail.com</a>
+                <div style="display: flex; gap: 1.5rem; font-size: 1.3rem; justify-content: center; align-items: center;">
+                    <a href="https://www.linkedin.com/in/fermavec/" target="_blank" aria-label="LinkedIn" style="color: var(--text-secondary); transition: color 0.2s;"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/fermavec" target="_blank" aria-label="Github" style="color: var(--text-secondary); transition: color 0.2s; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 1rem;"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+                <!-- PRESERVED: contenido original de la sección de colaboración (reemplazado por nuevo contacto)
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 3rem; margin-top: 1rem; align-items: start;">
                     <div>
                         <p style="font-weight: 600; margin-bottom: 1rem; color: var(--text-primary);">Disponible para:</p>
@@ -230,6 +291,7 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </section>
     </main>
@@ -249,6 +311,8 @@
         <button id="fontSizeDecBtn" class="accessibility-btn" aria-label="Reducir tamaño de fuente" title="Reducir tamaño de fuente" style="font-weight: 700; font-family: var(--font-main);">A-</button>
         <button id="fontSizeIncBtn" class="accessibility-btn" aria-label="Aumentar tamaño de fuente" title="Aumentar tamaño de fuente" style="font-weight: 700; font-family: var(--font-main);">A+</button>
     </div>
+
+
 </body>
 
 </html>
