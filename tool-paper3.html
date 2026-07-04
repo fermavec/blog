@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper3 | Tools | Fer Mavec</title>
+    <meta name="description" content="Paper3: Translating PDFs into accessible language and AI voice synthesis.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html#services">What I can do for you</a></li>
+                <li><a href="index.html#perspective">Perspective & Research</a></li>
+                <li><a href="tools.html">Accessible Tools</a></li>
+                <li><a href="index.html#contact">Let's talk</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1.2rem;">
+                <a href="herramienta-paper3.html" class="lang-toggle" style="font-size: 0.95rem;">ES</a>
+                <div class="hamburger" style="margin-left: 1rem;">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section style="padding: 6rem 0; min-height: 75vh;">
+            <div class="container" style="max-width: 800px;">
+                <a href="tools.html" style="color: var(--text-secondary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+                    <i class="fas fa-arrow-left"></i> Back to Tools
+                </a>
+                
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Paper3</h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem;">AI-powered translation of PDFs into accessible language with voice synthesis.</p>
+                
+                <div style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 3rem;">
+                    <p>
+                        Paper3 is a web application focused on the democratization of knowledge and accessibility. This tool takes complex PDF documents and translates them into accessible language in Spanish, making technical or academic texts much easier to understand.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Privacy and Security by Design:</strong> The platform requires a Gemini API key (Google AI Studio). To ensure maximum security, this key is <em>never stored in any database</em>; it is kept locally and securely within your own browser. <br>
+                        <em>How to get an API Key?</em> You can generate one for free by accessing <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a> with your Google account.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Multimodal Accessibility:</strong> Once the document is translated, you can use the built-in Web Speech API function (native to your browser, generating no additional costs) to listen to the text. Furthermore, if you wish, you can download the generated audio directly as an MP3 file to listen to wherever you want.
+                    </p>
+                </div>
+                
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="https://paper3.fermavec.com" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; padding: 1rem 1.5rem;">
+                        <i class="fas fa-external-link-alt"></i> Use Paper3
+                    </a>
+                    <a href="https://github.com/fermavec/paper3" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; padding: 1rem 1.5rem;">
+                        <i class="fab fa-github"></i> Clone Repository
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Fer Mavec.</div>
+                <p>&copy; 2026 Fer Mavec. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <div class="accessibility-widget">
+        <button id="ttsBtn" class="accessibility-btn" aria-label="Read content" title="Read content"><i class="fas fa-volume-up"></i></button>
+        <button id="fontSizeDecBtn" class="accessibility-btn" aria-label="Decrease font size" title="Decrease font size" style="font-weight: 700; font-family: var(--font-main);">A-</button>
+        <button id="fontSizeIncBtn" class="accessibility-btn" aria-label="Increase font size" title="Increase font size" style="font-weight: 700; font-family: var(--font-main);">A+</button>
+    </div>
+</body>
+</html>

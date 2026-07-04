@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlucoMentor | Herramientas | Fer Mavec</title>
+    <meta name="description" content="GlucoMentor: Webapp con IA para el control de la diabetes.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <div class="logo"><a href="es.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div>
+            <ul class="nav-links">
+                <li><a href="es.html#services">Qué puedo hacer por ti</a></li>
+                <li><a href="es.html#perspective">Perspectiva e Investigación</a></li>
+                <li><a href="herramientas.html">Herramientas de Accesibilidad</a></li>
+                <li><a href="es.html#contact">Hablemos</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1.2rem;">
+                <a href="tool-glucomentor.html" class="lang-toggle" style="font-size: 0.95rem;">EN</a>
+                <div class="hamburger" style="margin-left: 1rem;">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section style="padding: 6rem 0; min-height: 75vh;">
+            <div class="container" style="max-width: 800px;">
+                <a href="herramientas.html" style="color: var(--text-secondary); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+                    <i class="fas fa-arrow-left"></i> Volver a Herramientas
+                </a>
+                
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">GlucoMentor</h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem;">Asistente inteligente para el manejo integral de la diabetes.</p>
+                
+                <div style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 3rem;">
+                    <p>
+                        GlucoMentor es una aplicación web innovadora diseñada para transformar el registro y control de la diabetes. Esta herramienta permite un monitoreo riguroso y accesible de métricas fundamentales: niveles de glucosa, actividad física, ingesta de carbohidratos y administración de medicación.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        Aprovechando las capacidades de inteligencia artificial a través de Gemini, GlucoMentor ofrece una interacción híbrida que facilita su uso cotidiano. Los usuarios pueden introducir sus datos de forma manual tradicional, o mediante <strong>comandos de voz</strong>. Este registro por voz procesa lenguaje natural para clasificar y organizar múltiples métricas simultáneamente, reduciendo la fricción y el tiempo necesario para el seguimiento.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        La página principal presenta un <em>dashboard de métricas</em> especializado para personas con diabetes, visualizando tendencias de salud de manera clara para facilitar la toma de decisiones clínicas y mejorar la calidad de vida.
+                    </p>
+                </div>
+                
+                <a href="https://glucomentor.ai" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; padding: 1rem 1.5rem;">
+                    <i class="fas fa-external-link-alt"></i> Visitar GlucoMentor
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Fer Mavec.</div>
+                <p>&copy; 2026 Fer Mavec. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <div class="accessibility-widget">
+        <button id="ttsBtn" class="accessibility-btn" aria-label="Leer contenido" title="Leer contenido"><i class="fas fa-volume-up"></i></button>
+        <button id="fontSizeDecBtn" class="accessibility-btn" aria-label="Reducir tamaño de fuente" title="Reducir tamaño de fuente" style="font-weight: 700; font-family: var(--font-main);">A-</button>
+        <button id="fontSizeIncBtn" class="accessibility-btn" aria-label="Aumentar tamaño de fuente" title="Aumentar tamaño de fuente" style="font-weight: 700; font-family: var(--font-main);">A+</button>
+    </div>
+</body>
+</html>
