@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando Mavec - Links</title>
+    <!-- Import Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #121212; /* Dark charcoal */
+            --text-color: #ffffff;
+            --accent-color: #00ffff; /* Electric cyan */
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --hover-bg: rgba(0, 255, 255, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 1.5rem;
+            background-image: radial-gradient(circle at top center, #232323 0%, var(--bg-color) 100%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile-img-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-img-container::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transparent, var(--accent-color), transparent);
+            z-index: 1;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+        }
+
+        .profile h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .link-icon {
+            position: absolute;
+            left: 1.5rem;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .link-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.15), transparent);
+            transition: 0.5s;
+        }
+
+        .link-item:hover {
+            background: var(--hover-bg);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 255, 255, 0.2);
+            color: var(--accent-color);
+        }
+
+        .link-item:hover .link-icon {
+            transform: scale(1.2);
+        }
+
+        .link-item:hover::before {
+            left: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="profile">
+            <div class="profile-img-container">
+                <img src="https://ui-avatars.com/api/?name=Fernando+Mavec&background=00ffff&color=121212&size=200&font-size=0.33&bold=true" alt="Fernando Mavec">
+            </div>
+            <h1>Fernando Mavec</h1>
+            <p>Conectemos en mis redes</p>
+        </header>
+
+        <nav class="links">
+            <a href="https://youtube.com/@fernandomavec" class="link-item" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube link-icon"></i> YouTube
+            </a>
+            <a href="https://github.com/fermavec" class="link-item" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github link-icon"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/fermavec/" class="link-item" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin link-icon"></i> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/fermavec/" class="link-item" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram link-icon"></i> Instagram
+            </a>
+            <a href="https://books.google.cl/" class="link-item" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-book link-icon"></i> Libros
+            </a>
+        </nav>
+        
+        <footer>
+            &copy; 2026 Fernando Mavec
+        </footer>
+    </div>
+</body>
+</html>
