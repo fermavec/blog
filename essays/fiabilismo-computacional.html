@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiabilismo computacional y el problema de la práctica | Fer Mavec</title>
+    <meta name="description" content="Fiabilismo computacional y el problema de la práctica: una objeción desde el caso del instrumento fiable. Por Fernando Mavec.">
+    <meta name="author" content="Fernando Mavec">
+    <meta name="keywords" content="Epistemología, Fiabilismo Computacional, Juan M. Durán, Filosofía, IA">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <div class="logo"><a href="../es.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div>
+            <ul class="nav-links">
+                <li><a href="../es.html">Inicio</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1.2rem;">
+                <a href="fiabilismo-computacional-en.html" class="lang-toggle" style="font-size: 0.95rem;">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-container">
+        <article class="single-post">
+            <header class="post-header">
+                <span class="post-date">22 de agosto de 2026</span>
+                <h1>Fiabilismo computacional y el problema de la práctica: una objeción desde el caso del instrumento fiable</h1>
+                <p><strong>Fernando Mavec</strong></p>
+                <div class="tags">
+                    <span>#Epistemología</span>
+                    <span>#Filosofía</span>
+                    <span>#IA</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <p><em>Nota: Este texto surge tras la ponencia del Dr. Juan M. Durán en el seminario "Inteligencia Artificial tras bambalinas: herramientas formales y otras más" del Instituto de Investigaciones Filosóficas de la Universidad Nacional Autónoma de México (UNAM), y representa una duda desde la adopción del marco propuesto por Durán.</em></p>
+                
+                <h2>Introducción</h2>
+                <p>Durante tres meses estuve obsesionado con mejorar el control de mi diabetes. Tomé glucemias diarias en los horarios que indicó el equipo médico y, en ocasiones, de forma aleatoria para detectar posibles desajustes. El glucómetro funcionaba con exactitud —lo corroboré con otros instrumentos, que coincidían salvo variaciones mínimas— y todas las lecturas caían dentro del rango fijado por el especialista. Cuando llegó el momento de evaluar la HbA1c, que pondera el control glucémico del trimestre, el resultado fue 7.9%. Ninguna de mis mediciones había sido incorrecta; sin embargo, la conclusión que extraje de todas ellas lo era: el muestreo puntual atrapaba la franja por la que la glucosa necesariamente pasa al transitar entre extremos, y no los extremos mismos. Un instrumento fiable, aplicado sistemáticamente, me había dejado sistemáticamente engañado. Ese es, en el fondo, el problema que Juan M. Durán aborda al proponer el fiabilismo computacional frente a la opacidad epistémica de los sistemas algorítmicos, y el que motiva este reporte.</p>
+                
+                <h2>El problema</h2>
+                <p>Humphreys (2009) plantea que un proceso es epistémicamente opaco respecto de un agente cognitivo X en un momento t si X no conoce todos los elementos epistémicamente relevantes del proceso. Durante su charla, Durán desglosa cuatro piezas de esa definición:</p>
+                <ol>
+                    <li>Proceso. En matemáticas, la prueba; en computación, el algoritmo.</li>
+                    <li>Elementos epistémicamente relevantes. En la prueba, cada paso; en el algoritmo, las variables, funciones, operaciones matemáticas, datos y manejo de errores. La definición no exige conocerlos todos, sino aquellos de los que depende la justificación del resultado.</li>
+                    <li>Agente. Para Humphreys, el humano, aunque su ambición última sea una epistemología automatizada.</li>
+                    <li>Momento t. La relativización temporal.</li>
+                </ol>
+                <p>De la versión esencial de la opacidad se desprende la imposibilidad, en principio, de que un agente humano conozca esos elementos. La causa está en las restricciones de velocidad y complejidad del cómputo, no en la falta de permiso. Por lo tanto no es un problema de acceso: aunque nos entregaran todo el código y todos los pasos, seguiríamos sin poder recorrerlos.</p>
+                <p>La analogía matemática lo aclara. Ante una prueba podemos hacer dos cosas: seguir todos los pasos hasta el resultado, o saltarnos aquellos que resultan triviales. Para Humphreys ambas son epistémicamente equivalentes, porque reconocer un paso como trivial implica haberlo podido recorrer. En matemáticas conservamos, entonces, la capacidad de inspeccionar el proceso completo: lo que se denomina surveyability. Durán refuerza el punto con un contraste instrumental: sabemos que un telescopio nos muestra algo real porque hay leyes ópticas y mecanismos construidos que garantizan la relación causal. Con la caja negra esa garantía desaparece, y aparece lo que él llama ansiedad epistémica (Durán, 2026).</p>
+                <p>Lo que la opacidad compromete, precisamente, es la justificación. Si el conocimiento se analiza como creencia verdadera justificada (JTB), en el caso de un algoritmo ni la creencia ni la verdad del resultado están en disputa: el diagnóstico acierta y quien lo recibe lo cree. Lo que queda sin sustento es la J. Por eso Durán lee la opacidad como un problema de justificación y no de conocimiento en general —y conviene notar que Humphreys escribe que el sujeto no sabe, no que no entiende, aunque Beisbart (2021) toma esa segunda ruta.</p>
+                
+                <h2>La propuesta de Durán</h2>
+                <p>El fiabilismo computacional deriva del fiabilismo de procesos de Goldman (1979), que sostiene que una creencia está justificada si la produce un proceso fiable, independientemente de que el sujeto acceda a las razones. Si una cafetera produce buen café la mayor parte del tiempo, estoy justificado en esperar un buen café cada vez que la uso, y un fallo ocasional no la vuelve poco fiable mientras la frecuencia de éxito se mantenga alta. Ahí surge el problema para Durán: el fiabilismo clásico exige que el proceso sea fiable, y la opacidad impide precisamente comprobarlo. Su respuesta es trasladar la carga justificatoria del proceso a indicadores externos al algoritmo, cada uno justificado dentro de su propio campo (Durán y Formanek, 2018). De esta manera, la justificación ya no proviene de abrir la caja sino de la acreditación externa.</p>
+                <p>Estos indicadores se organizan en tres dimensiones. La técnica agrupa verificación y validación, análisis de robustez, manejo de errores e historial de implementaciones exitosas. El anclaje científico exige que los conceptos incrustados en el algoritmo tengan respaldo: COMPAS ilustra el punto, pues operacionalizar la noción de fairness obliga a elegir entre definiciones igualmente defendibles y mutuamente incompatibles. La aceptabilidad social remite a los ensayos y a la coherencia con el cuerpo de conocimiento establecido, como en el caso del baricitinib, donde el riesgo para pacientes inmunodeprimidos no salió del algoritmo sino de la discusión clínica posterior.</p>
+                <p>La arquitectura resultante es formalmente análoga a la de un régimen de conformidad certificable, como la ISO 42001, que tampoco exige transparencia sino controles verificables sobre el proceso. De ahí surge la pregunta: ¿qué distingue entonces un indicador de fiabilidad de un criterio de conformidad?</p>
+                
+                <h2>Una objeción</h2>
+                <p>Retomando el ejemplo de la introducción, teníamos un instrumento fiable y mediciones correctas, pero una creencia falsa sobre el estado del sistema. El glucómetro es preciso, pero el muestreo intersecta sistemáticamente la franja por la que una glucemia necesariamente transita al pasar de un extremo a otro. Así, la fiabilidad del instrumento resulta máxima por cualquier medida de frecuencia de acierto, y aun así el conjunto de salidas correctas produce una conclusión falsa, porque esa fiabilidad está acreditada respecto de una pregunta distinta de la que originalmente importaba. El riesgo para el fiabilismo computacional es el mismo: sus tres indicadores pueden estar todos satisfechos, cada uno correcto en su dominio, sin capturar la propiedad de la que dependía la justificación.</p>
+                <p>Esto ocurre porque se le pide al instrumento que justifique lo que solo la práctica puede justificar. El telescopio hace lo que la vista humana no puede y nadie dice que el telescopio conozca; conocemos nosotros a través de él. Entonces, lo que da justificación no es el aparato en sí mismo, sino la práctica que decide qué medir, con qué contrastarlo y bajo qué condiciones vale el resultado. En el ejemplo de mi introducción, la HbA1c no es un mejor glucómetro, sino un indicador de otro orden que solo tiene sentido dentro de una práctica clínica que ya sabía que las mediciones puntuales no bastan. Si el algoritmo es un instrumento en ese sentido, lo que habría que acreditar no es la salida sino la práctica que lo emplea. Cabe precisar que Durán no sostiene que el algoritmo sea un agente epistémico —de hecho rechaza el proyecto de automatizar la epistemología—, pero al pedir justificación para el output lo trata como un proceso formador de creencias comparable a la percepción o la memoria.</p>
+                <p>El fiabilismo responderá que si el sistema acierta con alta frecuencia entonces el proceso es fiable y no hay problema alguno; es, de hecho, la respuesta con la que el fiabilismo de procesos enfrentó desde el inicio los casos de acierto accidental. Pero la frecuencia se mide sobre la distribución en la que el correlato espurio funciona, y ninguno de los tres indicadores distingue entre un sistema fiable por haber captado el fenómeno y uno fiable por haber captado un correlato local. Esa distinción es precisamente la que importa cuando el sistema cambia de contexto. Durán podría replicar que la aceptabilidad social atrapa ese desajuste, pero él mismo admite en la sesión que no ofrece una regla de composición ni pesos relativos entre indicadores; sin ella, nada garantiza que un indicador corrija a otro en lugar de compensarlo.</p>
+                
+                <h2>Conclusiones</h2>
+                <p>Si el planteamiento anterior es correcto, la pregunta que corresponde hacerle a un algoritmo opaco no es cómo justificar su salida, sino cómo acreditar la práctica que lo emplea. Eso no invalida el fiabilismo computacional: reubica lo que sus indicadores estarían midiendo. Y explica, quizá, por qué su arquitectura se parece tanto a la de un régimen de certificación, dado que las normas de conformidad acreditan precisamente prácticas y no artefactos. Queda abierto si esa reubicación basta o si los sistemas de aprendizaje automático exigen una categoría epistémica que no sea ni la del instrumento ni la de la fuente.</p>
+                
+                <h2>Referencias</h2>
+                <ul>
+                    <li>Beisbart, C. (2021). Opacity thought through: On the intransparency of computer simulations. Synthese, 199(3–4), 11643–11666. https://doi.org/10.1007/s11229-021-03305-2</li>
+                    <li>Durán, J. M. (2026, 20 de agosto). Opacidad epistémica: novedad filosófica y científica. ¿Qué es la opacidad epistémica en algoritmos y qué se puede hacer al respecto? [Sesión de seminario]. Seminario "Inteligencia Artificial tras bambalinas: herramientas formales y otras más", Instituto de Investigaciones Filosóficas, Universidad Nacional Autónoma de México, Ciudad de México, México.</li>
+                    <li>Durán, J. M., y Formanek, N. (2018). Grounds for trust: Essential epistemic opacity and computational reliabilism. Minds and Machines, 28(4), 645–666. https://doi.org/10.1007/s11023-018-9481-6</li>
+                    <li>Goldman, A. I. (1979). What is justified belief? En G. S. Pappas (Ed.), Justification and knowledge (pp. 1–23). D. Reidel.</li>
+                    <li>Humphreys, P. (2009). The philosophical novelty of computer simulation methods. Synthese, 169(3), 615–626. https://doi.org/10.1007/s11229-008-9435-2</li>
+                </ul>
+
+                <hr>
+                <p><small>&copy; 2026 Fernando Mavec. Todos los derechos reservados.</small></p>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

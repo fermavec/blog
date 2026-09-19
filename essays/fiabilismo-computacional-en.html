@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computational Reliabilism and the Problem of Practice | Fer Mavec</title>
+    <meta name="description" content="Computational Reliabilism and the Problem of Practice: An Objection from the Case of the Reliable Instrument. By Fernando Mavec.">
+    <meta name="author" content="Fernando Mavec">
+    <meta name="keywords" content="Epistemology, Computational Reliabilism, Philosophy, AI">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-header">
+        <nav>
+            <div class="logo"><a href="../index.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1.2rem;">
+                <a href="fiabilismo-computacional.html" class="lang-toggle" style="font-size: 0.95rem;">ES</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-container">
+        <article class="single-post">
+            <header class="post-header">
+                <span class="post-date">August 22, 2026</span>
+                <h1>Computational Reliabilism and the Problem of Practice: An Objection from the Case of the Reliable Instrument</h1>
+                <p><strong>Fernando Mavec</strong></p>
+                <div class="tags">
+                    <span>#Epistemology</span>
+                    <span>#Philosophy</span>
+                    <span>#AI</span>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <p><em>Note: This text arises following the presentation by Dr. Juan M. Durán in the seminar "Inteligencia Artificial tras bambalinas: herramientas formales y otras más" at the Institute of Philosophical Research of the National Autonomous University of Mexico (UNAM), and represents a doubt arising from the adoption of the framework proposed by Durán.</em></p>
+                
+                <h2>Introduction</h2>
+                <p>For three months I was obsessed with improving the control of my diabetes. I took daily blood glucose readings at the times indicated by the medical team and, occasionally, at random to detect possible imbalances. The glucometer worked accurately—I corroborated this with other instruments, which matched with minimal variations—and all readings fell within the range set by the specialist. When the time came to evaluate the HbA1c, which weighs the glycemic control of the quarter, the result was 7.9%. None of my measurements had been incorrect; however, the conclusion I drew from all of them was: the point-in-time sampling caught the band through which glucose necessarily passes when moving between extremes, and not the extremes themselves. A reliable instrument, applied systematically, had left me systematically deceived. That is, at heart, the problem that Juan M. Durán addresses when proposing computational reliabilism against the epistemic opacity of algorithmic systems, and the one that motivates this report.</p>
+                
+                <h2>The Problem</h2>
+                <p>Humphreys (2009) posits that a process is epistemically opaque to a cognitive agent X at time t if X does not know all the epistemically relevant elements of the process. During his talk, Durán breaks down four pieces of that definition:</p>
+                <ol>
+                    <li>Process. In mathematics, the proof; in computing, the algorithm.</li>
+                    <li>Epistemically relevant elements. In the proof, every step; in the algorithm, the variables, functions, mathematical operations, data, and error handling. The definition does not require knowing all of them, but those on which the justification of the result depends.</li>
+                    <li>Agent. For Humphreys, the human, although his ultimate ambition is automated epistemology.</li>
+                    <li>Time t. Temporal relativization.</li>
+                </ol>
+                <p>From the essential version of opacity follows the impossibility, in principle, of a human agent knowing these elements. The cause lies in the speed and complexity constraints of computing, not in a lack of permission. Therefore, it is not an access problem: even if they gave us all the code and all the steps, we still could not go through them.</p>
+                <p>The mathematical analogy clarifies this. Faced with a proof, we can do two things: follow all the steps to the result, or skip those that are trivial. For Humphreys, both are epistemically equivalent, because recognizing a step as trivial implies having been able to go through it. In mathematics, we thus preserve the capacity to inspect the entire process: what is called surveyability. Durán reinforces the point with an instrumental contrast: we know that a telescope shows us something real because there are optical laws and constructed mechanisms that guarantee the causal relationship. With the black box, that guarantee disappears, and what he calls epistemic anxiety appears (Durán, 2026).</p>
+                <p>What opacity compromises, precisely, is justification. If knowledge is analyzed as justified true belief (JTB), in the case of an algorithm neither the belief nor the truth of the result is in dispute: the diagnosis is correct and the person receiving it believes it. What remains unsupported is the J. That is why Durán reads opacity as a problem of justification and not of knowledge in general—and it is worth noting that Humphreys writes that the subject does not know, not that they do not understand, although Beisbart (2021) takes that second route.</p>
+                
+                <h2>Durán's Proposal</h2>
+                <p>Computational reliabilism derives from Goldman's process reliabilism (1979), which maintains that a belief is justified if it is produced by a reliable process, regardless of whether the subject has access to the reasons. If a coffee maker produces good coffee most of the time, I am justified in expecting good coffee every time I use it, and an occasional failure does not render it unreliable as long as the success frequency remains high. Therein lies the problem for Durán: classic reliabilism requires the process to be reliable, and opacity prevents precisely that verification. His response is to shift the justificatory burden from the process to external indicators of the algorithm, each justified within its own field (Durán and Formanek, 2018). In this way, justification no longer comes from opening the box but from external accreditation.</p>
+                <p>These indicators are organized into three dimensions. The technical groups verification and validation, robustness analysis, error handling, and history of successful implementations. Scientific anchoring requires that the concepts embedded in the algorithm have backing: COMPAS illustrates the point, since operationalizing the notion of fairness forces choosing between equally defensible and mutually incompatible definitions. Social acceptability refers to trials and coherence with the established body of knowledge, as in the case of baricitinib, where the risk for immunosuppressed patients did not come from the algorithm but from subsequent clinical discussion.</p>
+                <p>The resulting architecture is formally analogous to that of a certifiable conformity regime, such as ISO 42001, which also does not demand transparency but verifiable controls over the process. Hence the question arises: what then distinguishes a reliability indicator from a conformity criterion?</p>
+                
+                <h2>An Objection</h2>
+                <p>Returning to the example in the introduction, we had a reliable instrument and correct measurements, but a false belief about the state of the system. The glucometer is accurate, but the sampling systematically intersects the band through which blood glucose necessarily passes when moving from one extreme to another. Thus, the reliability of the instrument turns out to be maximum by any measure of success frequency, and even so, the set of correct outputs produces a false conclusion, because that reliability is accredited concerning a different question from the one that originally mattered. The risk for computational reliabilism is the same: its three indicators can all be satisfied, each correct in its domain, without capturing the property on which the justification depended.</p>
+                <p>This happens because the instrument is asked to justify what only practice can justify. The telescope does what human sight cannot, and no one says that the telescope knows; we know through it. Therefore, what provides justification is not the device itself, but the practice that decides what to measure, what to contrast it with, and under what conditions the result is valid. In my introductory example, HbA1c is not a better glucometer, but an indicator of another order that only makes sense within a clinical practice that already knew point-in-time measurements were not enough. If the algorithm is an instrument in that sense, what should be accredited is not the output but the practice that employs it. It should be specified that Durán does not hold that the algorithm is an epistemic agent—in fact, he rejects the project of automating epistemology—but by asking for justification for the output, he treats it as a belief-forming process comparable to perception or memory.</p>
+                <p>Reliabilism will respond that if the system gets it right with high frequency then the process is reliable and there is no problem whatsoever; it is, in fact, the response with which process reliabilism initially faced cases of accidental success. But frequency is measured over the distribution in which the spurious correlate works, and none of the three indicators distinguishes between a system that is reliable because it captured the phenomenon and one that is reliable because it captured a local correlate. That distinction is precisely what matters when the system changes context. Durán could reply that social acceptability catches that mismatch, but he himself admits in the session that he does not offer a composition rule or relative weights among indicators; without it, nothing guarantees that one indicator corrects another instead of compensating for it.</p>
+                
+                <h2>Conclusions</h2>
+                <p>If the above reasoning is correct, the appropriate question to ask an opaque algorithm is not how to justify its output, but how to accredit the practice that uses it. This does not invalidate computational reliabilism: it relocates what its indicators would be measuring. And it explains, perhaps, why its architecture closely resembles a certification regime, given that conformity standards accredit precisely practices, not artifacts. It remains open whether this relocation is enough or if machine learning systems demand an epistemic category that is neither that of the instrument nor that of the source.</p>
+                
+                <h2>References</h2>
+                <ul>
+                    <li>Beisbart, C. (2021). Opacity thought through: On the intransparency of computer simulations. Synthese, 199(3–4), 11643–11666. https://doi.org/10.1007/s11229-021-03305-2</li>
+                    <li>Durán, J. M. (2026, August 20). Opacidad epistémica: novedad filosófica y científica. ¿Qué es la opacidad epistémica en algoritmos y qué se puede hacer al respecto? [Seminar session]. Seminario "Inteligencia Artificial tras bambalinas: herramientas formales y otras más", Instituto de Investigaciones Filosóficas, Universidad Nacional Autónoma de México, Mexico City, Mexico.</li>
+                    <li>Durán, J. M., and Formanek, N. (2018). Grounds for trust: Essential epistemic opacity and computational reliabilism. Minds and Machines, 28(4), 645–666. https://doi.org/10.1007/s11023-018-9481-6</li>
+                    <li>Goldman, A. I. (1979). What is justified belief? In G. S. Pappas (Ed.), Justification and knowledge (pp. 1–23). D. Reidel.</li>
+                    <li>Humphreys, P. (2009). The philosophical novelty of computer simulation methods. Synthese, 169(3), 615–626. https://doi.org/10.1007/s11229-008-9435-2</li>
+                </ul>
+
+                <hr>
+                <p><small>&copy; 2026 Fernando Mavec. All rights reserved.</small></p>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
