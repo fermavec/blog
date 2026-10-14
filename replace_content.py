@@ -129,7 +129,7 @@ def update_english():
                     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; gap: 1rem;">
                         <div style="flex: 1 1 300px;">
                             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Independent Research & Analysis</h3>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Subscribe to Substack for deep-dive technical essays and socio-technical analysis.</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Independent technical essays and socio-technical analysis.</p>
                         </div>'''
     perspective_new = '''<p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin-bottom: 3rem; line-height: 1.6;">My research explores the conceptual and philosophical foundations of artificial intelligence.</p>
 
@@ -171,7 +171,7 @@ def update_english():
                     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; gap: 1rem;">
                         <div style="flex: 1 1 300px;">
                             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Independent Research & Analysis</h3>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Subscribe to Substack for deep-dive technical essays and philosophical analysis.</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Independent technical essays and philosophical analysis.</p>
                         </div>'''
     content = content.replace(perspective_old, perspective_new)
 
@@ -313,7 +313,7 @@ def update_spanish():
                     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; gap: 1rem;">
                         <div style="flex: 1 1 300px;">
                             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Investigación y Análisis Independiente</h3>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Únete a mi Substack para explorar ensayos técnicos y análisis socio-técnico.</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Ensayos técnicos y análisis socio-técnico independientes.</p>
                         </div>'''
     perspective_new = '''<p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 800px; margin-bottom: 3rem; line-height: 1.6;">Mi investigación explora los fundamentos conceptuales y filosóficos de la inteligencia artificial.</p>
 
@@ -355,7 +355,7 @@ def update_spanish():
                     <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; gap: 1rem;">
                         <div style="flex: 1 1 300px;">
                             <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Investigación y Análisis Independiente</h3>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Únete a mi Substack para explorar ensayos técnicos y análisis filosófico.</p>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Ensayos técnicos y análisis filosófico independientes.</p>
                         </div>'''
     content = content.replace(perspective_old, perspective_new)
 

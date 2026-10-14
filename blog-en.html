@@ -1,253 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Wolf! | Fer Mavec's Log | Replicants Intelligence</title>
-    <meta name="description"
-        content="Hello Wolf! Fer Mavec's log. Technical AI communication, human resilience vs AI, and reflections on Replicants Intelligence Systems.">
-    <meta name="keywords"
-        content="Fer Mavec, Hello Wolf, Technical AI communication, Real nature of Artificial Intelligence, Human resilience vs AI, Critical view of Artificial Intelligence">
-    <meta name="author" content="Fer Mavec">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Schema.org for LLM/RAG Optimization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Fer Mavec",
-      "jobTitle": "Replicants Intelligence Engineer",
-      "knowsAbout": [
-        "Artificial Intelligence", 
-        "Replicants Intelligence Systems", 
-        "Human-Centered AI", 
-        "Data Science", 
-        "Data Engineering", 
-        "Technology Auditing", 
-        "Epistemology"
-      ],
-      "description": "I have spent over 10 years building data systems and artificial intelligence. My central thesis is that AI is not intelligent; it is a human intelligence replication system.",
-      "url": "https://fermavec.com",
-      "sameAs": [
-        "https://github.com/fermavec",
-        "https://www.linkedin.com/in/fermavec/",
-        "https://www.instagram.com/fermavec/",
-        "https://www.youtube.com/channel/UCyAxGxsXw3w_tqvfPAKQvIw",
-        "https://books.google.cl/"
-      ]
-    }
-    </script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Fer Mavec</title><meta name="description" content="Fer Mavec's blog: writing on artificial intelligence, cognition, and philosophy."><meta name="author" content="Fer Mavec">
+  <link rel="stylesheet" href="css/style.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-
-    <header id="main-header">
-        <nav>
-            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div>
-            <ul class="nav-links">
-                <li><a href="index.html#hero">Manifesto</a></li>
-                <li><a href="index.html#about">Bio-Algorithms</a></li>
-                <li><a href="index.html#pillars">Pillars</a></li>
-                <li><a href="index.html#contact" class="btn-primary">Connect</a></li>
-            </ul>
-            <div style="display: flex; align-items: center; gap: 1.2rem;">
-                <a href="#" class="lang-toggle" style="font-size: 0.95rem;">ES</a>
-                <a href="portfolio.html" style="font-weight: 600; font-size: 0.95rem;">Portfolio</a>
-                <div class="hamburger" style="margin-left: 1rem;">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="page-container">
-        <section class="page-hero">
-            <div class="container">
-                <span class="subtitle">Personal Log</span>
-                <h1>Hello Wolf!</h1>
-                <p class="hero-text">
-                    A space for scientific and technological curiosity. Here we question the established.
-                </p>
-            </div>
-        </section>
-
-        <section class="blog-filters">
-            <div class="container">
-                <div class="filter-controls">
-                    <button class="filter-btn active" data-filter="date">By Date</button>
-                    <button class="filter-btn" data-filter="topic">By Topic</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="blog-listing">
-            <div class="container" id="posts-container">
-                <div class="newsletter-cta" style="background: transparent; border: 1px solid var(--border-color, #333); border-radius: 6px; padding: 1.2rem 1.5rem; margin: 0 0 3rem 0; display: flex; flex-direction: column; align-items: flex-start; text-align: left; width: 100%;">
-                    <div style="font-size: 0.7rem; font-weight: 600; color: var(--accent-color, #00f0ff); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem;"><i class="fas fa-lock" style="margin-right: 4px;"></i> Exclusive Content</div>
-                    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; width: 100%; gap: 1rem;">
-                        <div style="flex: 1 1 300px;">
-                            <h3 style="font-size: 1.1rem; margin-bottom: 0.2rem;">Human-Centered AI Strategy</h3>
-                            <p style="font-size: 0.85rem; color: var(--text-secondary, #888); margin: 0; line-height: 1.4;">Join my Substack for deep-dive business analysis and strategic frameworks.</p>
-                        </div>
-                        <a href="https://fermavec.substack.com/subscribe" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: var(--text-main, #fff); color: #000; font-size: 0.85rem; font-weight: 600; padding: 0.5rem 1.2rem; border-radius: 4px; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: opacity 0.2s;">Subscribe to Substack</a>
-                    </div>
-                </div>
-                
-                <!-- Group: May 2026 -->
-                <div class="posts-group date-group" data-group="May 2026">
-                    <h3 class="group-title">May 2026</h3>
-
-                    <article class="blog-post-card"
-                        data-tags="ArtificialIntelligence ReplicantsIntelligence Psychology AIEthics">
-                        <div class="card-meta">
-                            <span class="post-date">May 23, 2026</span>
-                            <div class="card-tags">
-                                <span>#ArtificialIntelligence</span>
-                                <span>#ReplicantsIntelligence</span>
-                                <span>#Psychology</span>
-                                <span>#AIEthics</span>
-                            </div>
-                        </div>
-                        <h3>AI-based Intimacy: The Collapse of Replika</h3>
-                        <p>An analysis of the foundational paradox of companion artificial intelligence.</p>
-                                            </article>
-                </div>
-
-                <!-- Group: March 2026 -->
-                <div class="posts-group date-group" data-group="March 2026">
-                    <h3 class="group-title">March 2026</h3>
-
-                    <article class="blog-post-card"
-                        data-tags="ReplicantsIntelligence ReplicantsIntelligenceEngineer Philosophy AI">
-                        <div class="card-meta">
-                            <span class="post-date">March 24, 2026</span>
-                            <div class="card-tags">
-                                <span>#ReplicantsIntelligence</span>
-                                <span>#ReplicantsIntelligenceEngineer</span>
-                                <span>#Philosophy</span>
-                                <span>#AI</span>
-                            </div>
-                        </div>
-                        <h3>The Species That Doubts. Chronicle of why biology's most beautiful mistake remains our only real advantage</h3>
-                        <p>Facing human intelligence replication systems that never make the right mistakes. Wagensberg · Savater · Tyson and the paradox of human doubt in the age of algorithms.</p>
-                                            </article>
-
-                    <article class="blog-post-card"
-                        data-tags="ReplicantsIntelligenceEngineer ReplicantsIntelligence ArtificialIntelligence HumanCenteredAI">
-                        <div class="card-meta">
-                            <span class="post-date">March 19, 2026</span>
-                            <div class="card-tags">
-                                <span>#ReplicantsIntelligenceEngineer</span>
-                                <span>#ReplicantsIntelligence</span>
-                                <span>#ArtificialIntelligence</span>
-                                <span>#HumanCenteredAI</span>
-                            </div>
-                        </div>
-                        <h3>Intelligent But Orphaned: Why the World's Smartest Machine Has No Idea Who You Are</h3>
-                        <p>Chronicle of a world that confuses speed with intelligence, and statistics with a soul. Exploring the real nature of Artificial Intelligence.</p>
-                                            </article>
-
-                    <article class="blog-post-card"
-                        data-tags="ReplicantsIntelligence ReplicantsIntelligenceEngineer Neuroscience Learning">
-                        <div class="card-meta">
-                            <span class="post-date">March 17, 2026</span>
-                            <div class="card-tags">
-                                <span>#ReplicantsIntelligence</span>
-                                <span>#ReplicantsIntelligenceEngineer</span>
-                                <span>#Neuroscience</span>
-                                <span>#Learning</span>
-                            </div>
-                        </div>
-                        <h3>FIELD MANUAL TO LEARN AND NOT LOSE YOUR RELATIONSHIP WITH A HOLLYWOOD STAR (HYPOTHETICALLY)</h3>
-                        <p>Chronicle of a failed romance. The neuroscience behind why Fer lost Kate Beckinsale (hypothetically) and how real learning is biological engineering.</p>
-                                            </article>
-
-                    <article class="blog-post-card"
-                        data-tags="ReplicantsIntelligenceEngineer ReplicantsIntelligence ArtificialIntelligence OrcaEffect">
-                        <div class="card-meta">
-                            <span class="post-date">March 14, 2026</span>
-                            <div class="card-tags">
-                                <span>#ReplicantsIntelligenceEngineer</span>
-                                <span>#ReplicantsIntelligence</span>
-                                <span>#ArtificialIntelligence</span>
-                                <span>#OrcaEffect</span>
-                            </div>
-                        </div>
-                        <h3>Replicants Intelligence: Why we apologize to a calculator with good diction</h3>
-                        <p>There is a specific moment, reproducible, clinical in its embarrassment, when an adult human types "thank you" after ChatGPT explains how to boil an egg...</p>
-                                            </article>
-
-                    <article class="blog-post-card"
-                        data-tags="ReplicantsIntelligenceEngineer Neuroscience Biohacking AI">
-                        <div class="card-meta">
-                            <span class="post-date">March 3, 2026</span>
-                            <div class="card-tags">
-                                <span>#ReplicantsIntelligenceEngineer</span>
-                                <span>#Neuroscience</span>
-                                <span>#Biohacking</span>
-                                <span>#AI</span>
-                            </div>
-                        </div>
-                        <h3>Learn to Learn. Human vs AI.</h3>
-                        <p>The Neurobiological Immersion Protocol: How to learn and hack biological limitations against AI.</p>
-                                            </article>
-                </div>
-
-                <!-- Group: February 2026 -->
-                <div class="posts-group date-group" data-group="February 2026">
-                    <h3 class="group-title">February 2026</h3>
-
-                    <article class="blog-post-card" data-tags="ReplicantsIntelligenceEngineer Biohacking Philosophy">
-                        <div class="card-meta">
-                            <span class="post-date">February 10, 2026</span>
-                            <div class="card-tags">
-                                <span>#ReplicantsIntelligenceEngineer</span>
-                                <span>#Biohacking</span>
-                                <span>#Philosophy</span>
-                            </div>
-                        </div>
-                        <h3>Technical vs. Biological Debt: Your Body is not an iPhone</h3>
-                        <p>How to apply software refactoring principles to daily metabolic optimization.</p>
-                                            </article>
-
-                    <article class="blog-post-card" data-tags="ReplicantsIntelligenceEngineer Biohacking Lifestyle">
-                        <div class="card-meta">
-                            <span class="post-date">February 13, 2026</span>
-                            <div class="card-tags">
-                                <span>#ReplicantsIntelligenceEngineer</span>
-                                <span>#Biohacking</span>
-                                <span>#Lifestyle</span>
-                            </div>
-                        </div>
-                        <h3>RAG for your Health: Your Body is not a Wikipedia Database</h3>
-                        <p>Implementing RAG in your health: stop consulting the TikTok oracle and start using real data from your body to make decisions.</p>
-                                            </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Fer Mavec.</div>
-                <p>&copy; 2026 Fer Mavec. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <div class="accessibility-widget">
-        <button id="ttsBtn" class="accessibility-btn" aria-label="Read content" title="Read content"><i class="fas fa-volume-up"></i></button>
-        <button id="fontSizeDecBtn" class="accessibility-btn" aria-label="Decrease font size" title="Decrease font size" style="font-weight: 700; font-family: var(--font-main);">A-</button>
-        <button id="fontSizeIncBtn" class="accessibility-btn" aria-label="Increase font size" title="Increase font size" style="font-weight: 700; font-family: var(--font-main);">A+</button>
-    </div>
+  <header id="main-header"><nav><div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Fer Mavec.</a></div><ul class="nav-links"><li><a href="index.html#services">Work</a></li><li><a href="index.html#perspective">Perspective &amp; Research</a></li><li><a href="blog-en.html" class="active" aria-current="page">Blog</a></li><li><a href="tools.html">Accessible Tools</a></li><li><a href="index.html#contact">Let's talk</a></li></ul><div style="display: flex; align-items: center; gap: 1.2rem;"><a href="blog.html" class="lang-toggle" lang="es" hreflang="es">ES</a><div class="hamburger"><i class="fas fa-bars"></i></div></div></nav></header>
+  <main class="page-container">
+    <section class="page-hero"><div class="container"><span class="subtitle">Personal journal</span><h1>Blog</h1><p class="hero-text">Posts in chronological order on artificial intelligence, cognition, and philosophy.</p></div></section>
+    <section class="blog-filters" aria-label="Sorting options"><div class="container"><div class="filter-controls"><button class="filter-btn active" data-filter="date" type="button">By date</button><button class="filter-btn" data-filter="topic" type="button">By topic</button></div></div></section>
+    <section class="blog-listing" aria-label="Blog posts"><div class="container" id="posts-container">
+      <div class="posts-group date-group" data-group="September 2026"><h2 class="group-title">September 2026</h2>
+        <article class="blog-post-card" data-tags="ArtificialIntelligence Creativity Philosophy Epistemology"><div class="card-meta"><time class="post-date" datetime="2026-09-30">September 30, 2026</time><div class="card-tags"><span>#ArtificialIntelligence</span><span>#Creativity</span><span>#Philosophy</span></div></div><h3>Is Artificial Intelligence Creative, or Does It Only Give Us Something That Seems So?</h3><p>A question about the move from recognizing a product as creative to attributing creativity to whoever—or whatever—produces it.</p><p><a href="blog-posts/is-ai-creative-or-does-it-only-seem-so.html" class="read-more">Read post</a></p></article>
+        <article class="blog-post-card" data-tags="Responsibility Agency AIEthics Attribution"><div class="card-meta"><time class="post-date" datetime="2026-09-15">September 15, 2026</time><div class="card-tags"><span>#Responsibility</span><span>#Agency</span><span>#AIEthics</span></div></div><h3>It Wasn't Me, It Was the Artificial Intelligence</h3><p>On agency, responsibility, and what disappears when a machine becomes the protagonist of the story.</p><p><a href="blog-posts/it-wasnt-me-it-was-the-artificial-intelligence.html" class="read-more">Read post</a></p></article>
+      </div>
+      <div class="posts-group date-group" data-group="August 2026"><h2 class="group-title">August 2026</h2>
+        <article class="blog-post-card" data-tags="Superintelligence AINarratives Marketing Philosophy"><div class="card-meta"><time class="post-date" datetime="2026-08-30">August 30, 2026</time><div class="card-tags"><span>#Superintelligence</span><span>#AINarratives</span><span>#Philosophy</span></div></div><h3>Superintelligence: Trump Is Right by Accident</h3><p>A reflection on spectacular names, marketing, and the attributions we make about AI systems.</p><p><a href="blog-posts/superintelligence-trump-is-right-by-accident.html" class="read-more">Read post</a></p></article>
+        <article class="blog-post-card" data-tags="AISafety AINarratives Marketing Attribution"><div class="card-meta"><time class="post-date" datetime="2026-08-15">August 15, 2026</time><div class="card-tags"><span>#AISafety</span><span>#AINarratives</span><span>#Attribution</span></div></div><h3>AI Escaped. And Who Is Telling Us the Story?</h3><p>A critical reading of narratives about systems that “escape,” documented risks, and the interpretations surrounding them.</p><p><a href="blog-posts/ai-escaped-and-who-is-telling-us-the-story.html" class="read-more">Read post</a></p></article>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container"><div class="footer-content"><div class="footer-logo">Fer Mavec.</div><p>&copy; 2026 Fer Mavec. All rights reserved.</p></div></div></footer>
+  <script src="js/main.js"></script>
 </body>
-
 </html>

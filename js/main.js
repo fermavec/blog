@@ -1,220 +1,123 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
-    if (hamburger) {
+    if (hamburger && navLinks) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.innerHTML = navLinks.classList.contains('active')
-                ? '<i class="fas fa-times"></i>'
-                : '<i class="fas fa-bars"></i>';
+                ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
     }
 
-    // Smooth Scrolling for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            // Close mobile menu if open
-            if (navLinks.classList.contains('active')) {
+        anchor.addEventListener('click', event => {
+            const targetId = anchor.getAttribute('href');
+            const target = targetId && targetId !== '#' ? document.querySelector(targetId) : null;
+            if (!target) return;
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+            if (navLinks?.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 hamburger.innerHTML = '<i class="fas fa-bars"></i>';
             }
-
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
         });
     });
 
-    // Simple Intersection Observer for Fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe all sections and project cards
-    document.querySelectorAll('section, .project-card, .blog-post').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
+    document.querySelectorAll('.fade-in, section, .project-card, .blog-post, .blog-post-card').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
     });
 
-    // Add CSS class for animation via JS
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const postsContainer = document.getElementById('posts-container');
+    if (filterBtns.length && postsContainer) {
+        const originalContent = postsContainer.innerHTML;
+        filterBtns.forEach(button => button.addEventListener('click', () => {
+            filterBtns.forEach(item => item.classList.remove('active'));
+            button.classList.add('active');
+            if (button.dataset.filter === 'date') {
+                postsContainer.innerHTML = originalContent;
+                return;
+            }
+            const articles = [...new DOMParser().parseFromString(originalContent, 'text/html').querySelectorAll('article')];
+            const tags = new Map();
+            articles.forEach(article => (article.dataset.tags || 'Sin tema').split(' ').forEach(tag => {
+                tags.set(tag, [...(tags.get(tag) || []), article.outerHTML]);
+            }));
+            postsContainer.innerHTML = [...tags].map(([tag, posts]) =>
+                `<div class="posts-group topic-group"><h2 class="group-title">#${tag}</h2>${posts.join('')}</div>`
+            ).join('');
+        }));
+    }
+
+    addAccessibilityControls();
+});
+
+function addAccessibilityControls() {
+    if (document.getElementById('accessibility-controls')) return;
+
     const style = document.createElement('style');
-    style.innerHTML = `
-        .fade-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
+    style.textContent = `
+      .accessibility-widget { position: fixed; right: 1rem; bottom: 1rem; z-index: 9999; display: flex; gap: .35rem; padding: .45rem; background: #111827; border: 1px solid #94a3b8; border-radius: .6rem; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+      .accessibility-btn { min-width: 2.7rem; min-height: 2.7rem; padding: .35rem .55rem; background: #fff; color: #111827; border: 2px solid transparent; border-radius: .35rem; cursor: pointer; font: 700 1rem/1 sans-serif; }
+      .accessibility-btn:hover, .accessibility-btn:focus-visible { background: #e0f2fe; border-color: #38bdf8; outline: 3px solid #facc15; outline-offset: 2px; }
+      @media (max-width: 480px) { .accessibility-widget { right: .5rem; bottom: .5rem; } }
     `;
     document.head.appendChild(style);
 
-    // Hero abstract shape slight parallax
-    const heroShape = document.querySelector('.abstract-shape');
-    if (heroShape) {
-        window.addEventListener('mousemove', (e) => {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
+    const isSpanish = document.documentElement.lang.toLowerCase().startsWith('es');
+    const labels = isSpanish
+        ? { read: 'Leer contenido', stop: 'Detener lectura', decrease: 'Reducir tamaño del texto', increase: 'Aumentar tamaño del texto', reset: 'Restablecer tamaño del texto' }
+        : { read: 'Read content', stop: 'Stop reading', decrease: 'Decrease text size', increase: 'Increase text size', reset: 'Reset text size' };
+    const widget = document.createElement('div');
+    widget.id = 'accessibility-controls';
+    widget.className = 'accessibility-widget';
+    widget.setAttribute('role', 'group');
+    widget.setAttribute('aria-label', isSpanish ? 'Controles de accesibilidad' : 'Accessibility controls');
+    widget.innerHTML = `
+      <button class="accessibility-btn" id="readContentBtn" type="button" aria-label="${labels.read}" title="${labels.read}">🔊</button>
+      <button class="accessibility-btn" id="decreaseTextBtn" type="button" aria-label="${labels.decrease}" title="${labels.decrease}">A−</button>
+      <button class="accessibility-btn" id="increaseTextBtn" type="button" aria-label="${labels.increase}" title="${labels.increase}">A+</button>
+      <button class="accessibility-btn" id="resetTextBtn" type="button" aria-label="${labels.reset}" title="${labels.reset}">A</button>`;
+    document.body.appendChild(widget);
 
-            heroShape.style.transform = `translate(${x * 30}px, ${y * 30}px) scale(1.05)`;
-        });
-    }
-    // Blog Filtering Logic
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const postsContainer = document.getElementById('posts-container');
+    const root = document.documentElement;
+    const storedScale = Number(localStorage.getItem('ferMavecTextScale'));
+    let scale = Number.isFinite(storedScale) && storedScale >= 80 && storedScale <= 150 ? storedScale : 100;
+    const applyScale = () => {
+        root.style.fontSize = `${scale}%`;
+        localStorage.setItem('ferMavecTextScale', String(scale));
+    };
+    applyScale();
+    document.getElementById('increaseTextBtn').addEventListener('click', () => { scale = Math.min(150, scale + 10); applyScale(); });
+    document.getElementById('decreaseTextBtn').addEventListener('click', () => { scale = Math.max(80, scale - 10); applyScale(); });
+    document.getElementById('resetTextBtn').addEventListener('click', () => { scale = 100; applyScale(); });
 
-    if (filterBtns.length > 0 && postsContainer) {
-        // Store original content to restore 'date' view easily
-        const originalContent = postsContainer.innerHTML;
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active button state
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filterType = btn.getAttribute('data-filter');
-
-                if (filterType === 'date') {
-                    // Restore original HTML (which is grouped by date)
-                    postsContainer.innerHTML = originalContent;
-
-                    // Re-attach observers for animation
-                    document.querySelectorAll('.blog-post-card').forEach(el => {
-                        el.style.opacity = '0';
-                        el.style.transform = 'translateY(20px)';
-                        observer.observe(el);
-                    });
-
-                } else if (filterType === 'topic') {
-                    // Group by tags
-                    const articles = Array.from(new DOMParser().parseFromString(originalContent, 'text/html').querySelectorAll('article'));
-                    const tagsMap = {};
-
-                    articles.forEach(article => {
-                        const tags = article.getAttribute('data-tags') ? article.getAttribute('data-tags').split(' ') : ['Uncategorized'];
-                        tags.forEach(tag => {
-                            if (!tagsMap[tag]) {
-                                tagsMap[tag] = [];
-                            }
-                            tagsMap[tag].push(article.outerHTML);
-                        });
-                    });
-
-                    let newContent = '';
-                    for (const [tag, posts] of Object.entries(tagsMap)) {
-                        newContent += `
-                            <div class="posts-group topic-group">
-                                <h3 class="group-title">#${tag}</h3>
-                                ${posts.join('')}
-                            </div>
-                        `;
-                    }
-                    postsContainer.innerHTML = newContent;
-
-                    // Re-attach observers for animation
-                    document.querySelectorAll('.blog-post-card').forEach(el => {
-                        el.style.opacity = '0';
-                        el.style.transform = 'translateY(20px)';
-                        observer.observe(el);
-                    });
-                }
-            });
-        });
-    }
-
-    // Accessibility Features
-    const fontSizeIncBtn = document.getElementById('fontSizeIncBtn');
-    const fontSizeDecBtn = document.getElementById('fontSizeDecBtn');
-    const ttsBtn = document.getElementById('ttsBtn');
-
-    if (fontSizeIncBtn && fontSizeDecBtn) {
-        let currentScale = 100;
-        
-        fontSizeIncBtn.addEventListener('click', () => {
-            if (currentScale < 140) {
-                currentScale += 10;
-                document.documentElement.style.fontSize = currentScale + '%';
-            }
-        });
-        
-        fontSizeDecBtn.addEventListener('click', () => {
-            if (currentScale > 80) {
-                currentScale -= 10;
-                document.documentElement.style.fontSize = currentScale + '%';
-            }
-        });
-    }
-
-    if (ttsBtn) {
-        let isSpeaking = false;
-        
-        ttsBtn.addEventListener('click', () => {
-            if (isSpeaking || window.speechSynthesis.speaking) {
-                window.speechSynthesis.cancel();
-                isSpeaking = false;
-                ttsBtn.style.color = '';
-            } else {
-                const mainContent = document.querySelector('main');
-                if (mainContent) {
-                    const text = mainContent.innerText;
-                    const utterance = new SpeechSynthesisUtterance(text);
-                    utterance.lang = document.documentElement.lang === 'es' ? 'es-ES' : 'en-US';
-                    
-                    utterance.onend = () => {
-                        isSpeaking = false;
-                        ttsBtn.style.color = '';
-                    };
-                    
-                    window.speechSynthesis.speak(utterance);
-                    isSpeaking = true;
-                    ttsBtn.style.color = 'var(--text-primary)';
-                }
-            }
-        });
-        
-        window.addEventListener('beforeunload', () => {
-            window.speechSynthesis.cancel();
-        });
-    }
-
-    // Typewriter effect
-    const typewriterEs = document.getElementById('typewriter-text-es');
-    const typewriterEn = document.getElementById('typewriter-text-en');
-    
-    function typeWriter(element, text, i) {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            setTimeout(() => typeWriter(element, text, i + 1), 35);
-        }
-    }
-    
-    if (typewriterEs) {
-        const textEs = "Análisis independiente, ensayos técnicos y folclore digital en la intersección de la inteligencia artificial, la cognición y la sociedad.";
-        setTimeout(() => typeWriter(typewriterEs, textEs, 0), 500);
-    }
-    
-    if (typewriterEn) {
-        const textEn = "Independent analysis, technical essays and digital folklore at the intersection of artificial intelligence, cognition and society.";
-        setTimeout(() => typeWriter(typewriterEn, textEn, 0), 500);
-    }
-});
+    const readButton = document.getElementById('readContentBtn');
+    let utterance;
+    const stopReading = () => {
+        window.speechSynthesis?.cancel();
+        readButton.setAttribute('aria-label', labels.read);
+        readButton.title = labels.read;
+        readButton.textContent = '🔊';
+        readButton.setAttribute('aria-pressed', 'false');
+    };
+    readButton.addEventListener('click', () => {
+        if (!('speechSynthesis' in window)) return;
+        if (window.speechSynthesis.speaking) { stopReading(); return; }
+        const content = document.querySelector('main') || document.body;
+        const text = content.innerText.trim();
+        if (!text) return;
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = isSpanish ? 'es-ES' : 'en-US';
+        utterance.onend = stopReading;
+        utterance.onerror = stopReading;
+        readButton.setAttribute('aria-label', labels.stop);
+        readButton.title = labels.stop;
+        readButton.textContent = '■';
+        readButton.setAttribute('aria-pressed', 'true');
+        window.speechSynthesis.speak(utterance);
+    });
+    window.addEventListener('pagehide', stopReading);
+}
